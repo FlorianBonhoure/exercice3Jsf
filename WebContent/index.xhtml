@@ -13,8 +13,8 @@
 		<fieldset>
 			<legend>Vos informations</legend>
 			<h:form action="affichage.xhtml" method="POST">
-			<h:outputLabel for="nom">Nom</h:outputLabel> <h:inputText name="nom" id="nom" value="#{nom}"/><br/>
-			<h:outputLabel for="prenom">Prénom</h:outputLabel> <h:inputText name="prenom" id="prenom" value="#{prenom}"/><br/>
+			<h:outputLabel for="nom">Nom</h:outputLabel> <h:inputText name="nom" id="nom" value="#{user.nom}"/><br/>
+			<h:outputLabel for="prenom">Prénom</h:outputLabel> <h:inputText name="prenom" id="prenom" value="#{user.prenom}"/><br/>
 			<h:commandButton id="submit-button" value="Valider" action="affichage.xhtml"/> 
 		</h:form>
 		</fieldset>
