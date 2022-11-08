@@ -15,9 +15,16 @@
 			<h:form action="affichage.xhtml" method="POST">
 			<h:outputLabel for="nom">Nom</h:outputLabel> <h:inputText name="nom" id="nom" value="#{user.nom}"/><br/>
 			<h:outputLabel for="prenom">Prénom</h:outputLabel> <h:inputText name="prenom" id="prenom" value="#{user.prenom}"/><br/>
+			<h:outputLabel for="mdp">Mot de passe</h:outputLabel> <h:inputSecret name="mdp" id="mdp" value="#{user.mdp}"/><br/>
+			<h:outputLabel for="marie">Êtes-vous marié ? (cocher si oui)</h:outputLabel> <h:selectBooleanCheckbox name="marie" id="marie" value="#{user.marie}"/><br/><br/>
+			Êtes-vous un homme ou une femme ?<br/><br/>
+			<h:selectOneRadio value="#{user.sexe}">
+				<f:selectItem itemLabel="homme" itemValue="homme"/>
+				<f:selectItem itemLabel="femme" itemValue="femme"/>
+			</h:selectOneRadio><br/><br/>
 			<h:commandButton id="submit-button" value="Valider" action="affichage.xhtml"/> 
+			<h:commandButton id="display-button" value="Afficher info" action="#{user.afficherInfo()}"/>
 		</h:form>
 		</fieldset>
-		
 	</h:body>
 </html>
